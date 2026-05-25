@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #F8FAFC;
+  --bg-dots: #d1d1d1;
+  --yellow: #FFB3D9;
+  --blue: #7DD3FC;
+  --pink: #ADD8E6;
+  --green: #A7F3D0;
+  --purple: #bca0dc;
+  --white: #ffffff;
+  --black: #1E293B;
+
+  --border-width: 3px;
+  --border-radius: 4px;
+  --shadow-color: #111111;
+  --shadow-offset: 4px;
+}
+
+:root.dark {
+  --bg-color: #121212;
+  --bg-dots: #333333;
+  --white: #1e1e1e;
+  --black: #f0f0f0;
+  --shadow-color: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--black);
+
+  /* The dot grid background */
+  background-image: radial-gradient(var(--bg-dots) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  min-height: 100vh;
+}
+
+/* Neo-brutalism UI components */
+.neo-box {
+  background-color: var(--white);
+  border: var(--border-width) solid var(--black);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--shadow-color);
+}
+
+.neo-box-hover {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.neo-box-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0px var(--shadow-color);
+}
+
+.neo-box-hover:active {
+  transform: translate(var(--shadow-offset), var(--shadow-offset));
+  box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--white);
+  border: var(--border-width) solid var(--black);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--shadow-color);
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--black);
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0px var(--shadow-color);
+}
+
+.neo-btn:active {
+  transform: translate(var(--shadow-offset), var(--shadow-offset));
+  box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+/* Specific colors */
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-pink {
+  background-color: var(--pink);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.bg-purple {
+  background-color: var(--purple);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Layout utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Text highlights like in the screenshot */
+.highlight {
+  display: inline-block;
+  padding: 0 0.5rem;
+  font-weight: 600;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+}
+
+/* (No scroll-snap styles) */
